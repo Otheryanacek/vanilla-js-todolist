@@ -81,8 +81,9 @@ form button:hover {
 
 /* David's image styling - appears to the left of todo list */
 .david-image {
-  max-width: 200px; /* Limit image width */
-  max-height: 300px; /* Limit image height */
+  width: 200px; /* Fixed width for consistency */
+  height: 300px; /* Fixed height for consistency */
+  object-fit: cover; /* Maintains aspect ratio while filling container */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
@@ -91,6 +92,16 @@ form button:hover {
 .todo-list {
   min-width: 30%; /* Responsive minimum width - adapts to larger screens */
   list-style: none; /* Removes default list bullets */
+}
+
+/* Llama image styling - appears to the right of todo list */
+.llama-image {
+  width: 200px; /* Same width as David's image */
+  height: 300px; /* Same height as David's image */
+  object-fit: cover; /* Maintains aspect ratio while filling container */
+  object-position: center top; /* Crops from bottom by positioning top of image */
+  border-radius: 10px; /* Rounded corners to match David's image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow to match David's image */
 }
 
 /* ===== INDIVIDUAL TODO ITEM STYLING ===== */
