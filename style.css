@@ -1,90 +1,112 @@
+/* ===== GLOBAL RESET AND BASE STYLES ===== */
+/* Universal reset to ensure consistent styling across browsers */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== LINK STYLING ===== */
+/* Default link appearance with hover transition effect */
 a {
   color: #fccc54;
   text-decoration: none;
 }
 
+/* Smooth color transition on hover for better user experience */
 a:hover {
   color: #c8f524;
   transition: 0.25s;
 }
 
+/* ===== BODY AND LAYOUT FOUNDATION ===== */
+/* Main body styling with gradient background and typography setup */
 body {
   background-image: linear-gradient(120deg, #a149e9 0%, #a31c7b 100%);
   color: white;
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
+  min-height: 100vh; /* Ensures full viewport height coverage */
+  font-family: "Roboto", sans-serif; /* Google Fonts integration */
 }
 
+/* ===== HEADER COMPONENT ===== */
+/* Header styling with flexible layout for title and navigation */
 header {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
 }
 
+/* ===== FORM LAYOUT AND INPUT COMPONENTS ===== */
+/* Shared layout properties for header and form - centers content vertically */
 header,
 form {
-  min-height: 20vh;
+  min-height: 20vh; /* Takes up 20% of viewport height for balanced spacing */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Shared styling for form input and button elements */
 form input,
 form button {
   padding: 0.5rem;
   font-size: 1rem;
   border: none;
   background: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* Maintains consistent typography */
 }
 
+/* Form button specific styling with interactive states */
 form button {
   color: #ff47f6;
   background: #e8bef8;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for all properties on interaction */
 }
 
+/* Button hover state with color inversion for visual feedback */
 form button:hover {
   background: #ff47f6;
   color: white;
 }
 
+/* ===== TODO LIST CONTAINER AND LAYOUT ===== */
+/* Main container for todo list with centered alignment */
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Todo list wrapper with responsive width and clean list styling */
 .todo-list {
-  min-width: 30%;
-  list-style: none;
+  min-width: 30%; /* Responsive minimum width - adapts to larger screens */
+  list-style: none; /* Removes default list bullets */
 }
 
+/* ===== INDIVIDUAL TODO ITEM STYLING ===== */
+/* Individual todo item with flexbox layout for content and action buttons */
 .todo {
   margin: 0.5rem;
   background: white;
   font-size: 1.5rem;
   color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Spreads content and buttons to opposite ends */
   align-items: center;
-  transition: all 1s ease;
+  transition: all 1s ease; /* Long transition duration for smooth animations during state changes */
 }
 
+/* Todo text content takes up available space using flex-grow */
 .todo li {
   flex: 1;
 }
 
+/* ===== ACTION BUTTONS ===== */
+/* Shared styling for trash and complete buttons with consistent sizing */
 .trash-btn,
 .complete-btn {
-  background: #e24f27;
+  background: #e24f27; /* Default red background for trash button */
   color: white;
   border: none;
   padding: 1rem;
@@ -92,24 +114,32 @@ form button:hover {
   font-size: 1rem;
 }
 
+/* Complete button override with green background to indicate positive action */
 .complete-btn {
   background: rgb(11, 212, 162);
 }
 
+/* ===== TODO ITEM CONTENT ===== */
+/* Padding for todo text content to prevent text from touching edges */
 .todo-item {
   padding: 0rem 0.5rem;
 }
 
+/* ===== ANIMATION AND TRANSITION EFFECTS ===== */
+/* Fall animation class - creates slide-out effect when todo is deleted */
 .fall {
-  opacity: 0;
-  transform: translateX(30vw);
+  opacity: 0; /* Fades out the element */
+  transform: translateX(30vw); /* Slides element 30% of viewport width to the right */
 }
 
+/* ===== TODO STATE STYLING ===== */
+/* Completed todo visual state with reduced opacity for "done" appearance */
 .completed {
   opacity: 0.5;
 }
 
+/* Pseudo-element to add visual completion indicator */
 .completed:before {
-  content: "✘";
+  content: "✘"; /* Adds X mark symbol before completed todos */
   margin-left: 5px;
 }

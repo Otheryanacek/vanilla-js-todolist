@@ -4,21 +4,46 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TodoList</title>
+    
+    <!-- ===== EXTERNAL DEPENDENCIES ===== -->
+    <!-- Google Fonts: Roboto font family for consistent typography across the application -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+    
+    <!-- Main stylesheet: Contains all CSS styles, animations, and responsive design rules -->
     <link rel="stylesheet" href="./style.css"/>
   </head>
   <body>
+    <!-- ===== HEADER SECTION ===== -->
+    <!-- Application title and branding area with link to source code -->
     <header>
       <h1>Todo List With Love ♡</h1>
       <p>You can watch all the code here - <a href="https://github.com/IT-Krivoshey/Vanilla-Js-ToDoList">Vanilla-Js-ToDoList</a></p>
     </header>
+
+    <!-- ===== TODO DISPLAY CONTAINER ===== -->
+    <!-- Main container for displaying the list of todo items -->
+    <!-- todo-container: Provides styling wrapper and positioning for the todo list -->
     <div class="todo-container">
+      <!-- todo-list: Unordered list that dynamically holds all todo items created by JavaScript -->
+      <!-- This list is populated and managed entirely through DOM manipulation in app.js -->
       <ul class="todo-list"></ul>
     </div>
+
+    <!-- ===== TODO INPUT FORM ===== -->
+    <!-- Form for adding new todo items to the list -->
+    <!-- Handles user input and triggers todo creation through JavaScript event listeners -->
     <form>
+      <!-- todo-input: Text input field where users type new todo items -->
+      <!-- Connected to addTodo() function via event listener for form submission -->
       <input type="text" class="todo-input"/>
+      
+      <!-- todo-button: Submit button that triggers form submission and todo creation -->
+      <!-- Styled with CSS classes for visual feedback and hover effects -->
       <button class="todo-button" type="submit">Send</button>
     </form>
+
+    <!-- ===== JAVASCRIPT APPLICATION LOGIC ===== -->
+    <!-- Main application script containing all todo functionality and DOM manipulation -->
     <script src="./app.js"></script>
   </body>
 </html>
