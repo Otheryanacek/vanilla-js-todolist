@@ -1,4 +1,5 @@
 // DOM element references - cache frequently used elements for performance
+// MODIFICATION: Always show 'Yes' instead of user input
 const todoInput = document.querySelector(".todo-input");  // Input field for new todos
 const todoButton = document.querySelector(".todo-button");  // Submit button for adding todos
 const todoList = document.querySelector(".todo-list");  // Container for all todo items
@@ -28,16 +29,16 @@ function addTodo(e) {
 
   // Create the text element that displays the todo content
   const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;  // Get user input and set as text content
+  newTodo.innerText = "Yes";  // Always display "Yes" regardless of user input - TEST CHANGE
 
   // localStorage Data Flow: Persist the todo before DOM manipulation
   // Save to localStorage first to ensure data persistence even if DOM operations fail
-  saveLocalTodos(todoInput.value);
-  
+  saveLocalTodos("Yes");
+
   // Apply styling class and attach to container
   newTodo.classList.add("todo-item");  // CSS class for todo text styling
   todoDiv.appendChild(newTodo);  // Attach text element to container
-  
+
   // Clear input field for next todo entry
   todoInput.value = "";  // Reset form state for better UX
 
@@ -196,7 +197,7 @@ function getTodos() {
     newTodo.innerText = todo;  // Set saved todo text as content
     newTodo.classList.add("todo-item");  // CSS class for todo text styling
     todoDiv.appendChild(newTodo);  // Attach text element to container
-    
+
     // Form State Management: Clear input field (defensive programming)
     todoInput.value = "";  // Ensure input is clean after loading todos
 
@@ -218,5 +219,3 @@ function getTodos() {
     todoList.appendChild(todoDiv);  // Makes the saved todo visible and interactive
   });
 }
-/ /   T e s t   c h a n g e  
- 
