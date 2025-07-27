@@ -20,6 +20,16 @@
 
     </header>
 
+    <!-- ===== IMAGES CONTAINER ===== -->
+    <!-- Container for both images - repositioned on mobile -->
+    <div class="images-container">
+      <!-- David's image: Appears to the left of the todo list on desktop, above form on mobile -->
+      <img src="david.jpg" alt="David Yanacek" class="david-image"/>
+      
+      <!-- Llama image: Appears to the right of the todo list on desktop, above form on mobile -->
+      <img src="llama.jpg" alt="Llama" class="llama-image"/>
+    </div>
+
     <!-- ===== TODO INPUT FORM ===== -->
     <!-- Form for adding new todo items to the list -->
     <!-- Handles user input and triggers todo creation through JavaScript event listeners -->
@@ -34,18 +44,12 @@
     </form>
 
     <!-- ===== TODO DISPLAY CONTAINER ===== -->
-    <!-- Main container for displaying the list of todo items with images -->
-    <!-- todo-container: Provides styling wrapper and positioning for the todo list and images -->
+    <!-- Main container for displaying the list of todo items -->
+    <!-- todo-container: Provides styling wrapper and positioning for the todo list -->
     <div class="todo-container">
-      <!-- David's image: Appears to the left of the todo list -->
-      <img src="david.jpg" alt="David Yanacek" class="david-image"/>
-      
       <!-- todo-list: Unordered list that dynamically holds all todo items created by JavaScript -->
       <!-- This list is populated and managed entirely through DOM manipulation in app.js -->
       <ul class="todo-list"></ul>
-      
-      <!-- Llama image: Appears to the right of the todo list -->
-      <img src="llama.jpg" alt="Llama" class="llama-image"/>
     </div>
 
     <!-- ===== JAVASCRIPT APPLICATION LOGIC ===== -->
